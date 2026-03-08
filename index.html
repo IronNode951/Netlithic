@@ -6,8 +6,8 @@
   <title>Netlithic</title>
   <style>
     :root {
-      --bg: #050b1a;
-      --bg-2: #08152d;
+      --bg: #040816;
+      --bg-2: #081225;
       --panel: rgba(11, 24, 52, 0.72);
       --line: rgba(116, 166, 255, 0.18);
       --text: #eef4ff;
@@ -141,7 +141,7 @@
 
     .hero-wrap {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 36px;
       align-items: center;
     }
@@ -223,7 +223,13 @@
       max-width: 680px;
     }
 
-    .stat {
+    .stat,
+    .mini-panel,
+    .feature,
+    .phase,
+    .token-card,
+    .builder-card,
+    .community-card {
       padding: 18px;
       border-radius: 20px;
       background: rgba(255,255,255,0.03);
@@ -237,9 +243,19 @@
       font-size: 1.2rem;
     }
 
-    .stat span {
+    .stat span,
+    .mini-panel p,
+    .feature p,
+    .phase p,
+    .token-card p,
+    .builder-card p,
+    .community-card p,
+    .network-row span,
+    .status-badges span,
+    .arch-node p {
       color: var(--muted);
       font-size: 0.92rem;
+      line-height: 1.7;
     }
 
     .hero-card {
@@ -296,18 +312,23 @@
     .comment { color: #7f91b4; }
     .good { color: #87ffc1; }
 
-    .floating-card {
-      margin-top: 18px;
-      padding: 18px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
+    .floating-card,
+    .mini-grid,
+    .token-grid,
+    .builder-grid,
+    .community-grid,
+    .status-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
 
-    .pill {
+    .floating-card {
+      margin-top: 18px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pill,
+    .status-badge {
       padding: 12px 14px;
       border-radius: 16px;
       background: rgba(94,162,255,0.08);
@@ -317,7 +338,7 @@
     }
 
     .section {
-      padding: 38px 0;
+      padding: 42px 0;
     }
 
     .section-head {
@@ -341,23 +362,30 @@
       line-height: 1.7;
     }
 
-    .feature-grid {
+    .feature-grid,
+    .roadmap,
+    .token-grid,
+    .builder-grid,
+    .community-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
 
-    .feature {
+    .feature,
+    .phase,
+    .token-card,
+    .builder-card,
+    .community-card {
       position: relative;
       padding: 26px;
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: var(--shadow);
       overflow: hidden;
     }
 
-    .feature::after {
+    .feature::after,
+    .token-card::after,
+    .builder-card::after,
+    .community-card::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -366,7 +394,10 @@
       transition: opacity 0.2s ease;
     }
 
-    .feature:hover::after { opacity: 1; }
+    .feature:hover::after,
+    .token-card:hover::after,
+    .builder-card:hover::after,
+    .community-card:hover::after { opacity: 1; }
 
     .feature-icon {
       width: 52px;
@@ -381,50 +412,130 @@
       font-weight: 800;
     }
 
-    .feature h3 {
+    .feature h3,
+    .phase h3,
+    .token-card h3,
+    .builder-card h3,
+    .community-card h3,
+    .mini-panel h3,
+    .network-panel h3,
+    .arch-node h3 {
       margin: 0 0 10px;
-      font-size: 1.15rem;
+      font-size: 1.08rem;
     }
 
-    .feature p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .roadmap {
+    .protocol-layout,
+    .network-layout {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      align-items: stretch;
     }
 
-    .phase {
-      padding: 24px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.03);
+    .protocol-card,
+    .network-panel,
+    .architecture-card {
+      padding: 28px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: var(--shadow);
     }
 
-    .phase small {
+    .protocol-list,
+    .status-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .mini-grid {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 18px;
+    }
+
+    .mini-panel strong,
+    .network-row strong,
+    .status-badges strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .architecture-flow {
+      display: grid;
+      gap: 14px;
+    }
+
+    .arch-node {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(94,162,255,0.06);
+      border: 1px solid rgba(116,166,255,0.16);
+      position: relative;
+    }
+
+    .arch-node:not(:last-child)::after {
+      content: "↓";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -18px;
+      color: var(--blue);
+      font-size: 1.1rem;
+    }
+
+    .roadmap {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .phase small,
+    .eyebrow-alt {
       display: inline-block;
       margin-bottom: 12px;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.14em;
       font-weight: 700;
+      font-size: 0.75rem;
     }
 
-    .phase h3 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
+    .token-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .token-number,
+    .community-number {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--text);
     }
 
-    .phase p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 0.95rem;
+    .community-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .network-panel {
+      background: linear-gradient(180deg, rgba(13, 26, 58, 0.85), rgba(8, 18, 39, 0.84));
+    }
+
+    .status-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 18px;
+    }
+
+    .network-row {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .status-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
     }
 
     .cta {
@@ -491,36 +602,44 @@
 
     @media (max-width: 1024px) {
       .hero-wrap,
+      .protocol-layout,
+      .network-layout,
       .feature-grid,
-      .roadmap {
+      .roadmap,
+      .token-grid,
+      .builder-grid,
+      .community-grid {
         grid-template-columns: 1fr 1fr;
       }
 
-      .hero-wrap > :first-child {
+      .hero-wrap > :first-child,
+      .protocol-layout > :first-child,
+      .network-layout > :first-child {
         grid-column: span 2;
       }
     }
 
     @media (max-width: 760px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 42px;
-      }
-
+      .nav-links { display: none; }
+      .hero { padding-top: 42px; }
       .hero-wrap,
+      .protocol-layout,
+      .network-layout,
       .feature-grid,
       .roadmap,
       .hero-stats,
-      .floating-card {
+      .floating-card,
+      .mini-grid,
+      .token-grid,
+      .builder-grid,
+      .community-grid,
+      .status-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-wrap > :first-child {
-        grid-column: span 1;
-      }
+      .hero-wrap > :first-child,
+      .protocol-layout > :first-child,
+      .network-layout > :first-child { grid-column: span 1; }
 
       .section-head,
       .footer-inner {
@@ -531,9 +650,13 @@
       .cta-box,
       .hero-card,
       .feature,
-      .phase {
-        padding: 24px;
-      }
+      .phase,
+      .protocol-card,
+      .network-panel,
+      .architecture-card,
+      .token-card,
+      .builder-card,
+      .community-card { padding: 24px; }
     }
   </style>
 </head>
@@ -552,9 +675,9 @@
         <a href="#features">Features</a>
         <a href="#why">Why Netlithic</a>
         <a href="#roadmap">Roadmap</a>
-        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://x.com/" target="_blank" rel="noreferrer">X</a>
-        <a href="https://discord.com/" target="_blank" rel="noreferrer">Discord</a>
+        <a href="https://github.com/IronNode951/Netlithic" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://x.com/netlithicchain" target="_blank" rel="noreferrer">X</a>
+        <a href="https://discord.gg/a92xq4du" target="_blank" rel="noreferrer">Discord</a>
         <a href="#cta" class="nav-cta">Join Early</a>
       </nav>
     </div>
@@ -575,9 +698,9 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://github.com/" target="_blank" rel="noreferrer">Explore the build</a>
+            <a class="btn btn-primary" href="https://github.com/IronNode951/Netlithic" target="_blank" rel="noreferrer">Explore the build</a>
             <a class="btn btn-secondary" href="#features">See the vision</a>
-            <a class="btn btn-secondary" href="https://discord.com/" target="_blank" rel="noreferrer">Join Discord</a>
+            <a class="btn btn-secondary" href="https://discord.gg/a92xq4du" target="_blank" rel="noreferrer">Join Discord</a>
           </div>
 
           <div class="hero-stats">
@@ -633,6 +756,60 @@
             Most launches reward timing games, insider exits, and attention spikes. Netlithic aims for the opposite:
             a cleaner launch philosophy, stronger social trust, and a blockchain identity people can actually rally around.
           </p>
+        </div>
+
+        <div class="protocol-layout">
+          <div class="protocol-card reveal">
+            <span class="eyebrow-alt">Protocol</span>
+            <h3>The Netlithic Protocol</h3>
+            <p>
+              Netlithic is a community-governed blockchain concept designed to reduce speculative market manipulation,
+              align long-term participation, and create a foundation for AI-native infrastructure.
+            </p>
+            <div class="protocol-list">
+              <div class="mini-panel">
+                <strong>Community-first governance</strong>
+                <p>Protocol direction, treasury evolution, and upgrades are meant to be shaped by aligned builders over time.</p>
+              </div>
+              <div class="mini-panel">
+                <strong>Anti-extraction philosophy</strong>
+                <p>The goal is to discourage short-term attention farming and encourage healthier network behavior from day one.</p>
+              </div>
+            </div>
+            <div class="mini-grid">
+              <div class="mini-panel">
+                <strong>Open source</strong>
+                <p>Built in public with GitHub-native iteration.</p>
+              </div>
+              <div class="mini-panel">
+                <strong>AI-native path</strong>
+                <p>Structured for future protocol automation and agent tooling.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="architecture-card reveal">
+            <span class="eyebrow-alt">Architecture</span>
+            <h3>System design path</h3>
+            <div class="architecture-flow">
+              <div class="arch-node">
+                <h3>Nodes</h3>
+                <p>Independent participants help secure and relay the network.</p>
+              </div>
+              <div class="arch-node">
+                <h3>Consensus Layer</h3>
+                <p>Agreement logic keeps state updates coordinated and verifiable.</p>
+              </div>
+              <div class="arch-node">
+                <h3>Governance Layer</h3>
+                <p>Community decisions guide treasury, upgrades, and protocol direction.</p>
+              </div>
+              <div class="arch-node">
+                <h3>AI Protocol Layer</h3>
+                <p>Future-ready foundation for intelligent agents and onchain automation.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -755,6 +932,166 @@
       </div>
     </section>
 
+    <section class="section" id="tokenomics">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Tokenomics direction</h2>
+          </div>
+          <p>
+            Serious protocols explain how incentives will align. This section signals economic intention, transparency, and long-term planning.
+          </p>
+        </div>
+
+        <div class="token-grid">
+          <article class="token-card reveal">
+            <span class="token-number">40%</span>
+            <h3>Community treasury</h3>
+            <p>Reserved for governance-led growth, grants, ecosystem development, and long-term coordination.</p>
+          </article>
+          <article class="token-card reveal">
+            <span class="token-number">25%</span>
+            <h3>Ecosystem development</h3>
+            <p>Supports tooling, integrations, protocol utilities, and expansion of the builder surface area.</p>
+          </article>
+          <article class="token-card reveal">
+            <span class="token-number">15%</span>
+            <h3>Core contributors</h3>
+            <p>Designed to align the people doing the work without making the project feel insider-captured.</p>
+          </article>
+          <article class="token-card reveal">
+            <span class="token-number">20%</span>
+            <h3>Reserve + early builders</h3>
+            <p>Maintains flexibility for future incentives, strategic growth, and committed early participation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ecosystem">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Ecosystem vision</h2>
+          </div>
+          <p>
+            Billion-dollar projects do not just explain what they are. They show what can exist on top of them.
+          </p>
+        </div>
+
+        <div class="builder-grid">
+          <article class="builder-card reveal">
+            <div class="feature-icon">◎</div>
+            <h3>AI agent infrastructure</h3>
+            <p>Foundations for autonomous systems that need transparent coordination, execution, and onchain identity.</p>
+          </article>
+          <article class="builder-card reveal">
+            <div class="feature-icon">↗</div>
+            <h3>Governance tooling</h3>
+            <p>Modules for proposals, treasury coordination, and community participation layers that evolve with the network.</p>
+          </article>
+          <article class="builder-card reveal">
+            <div class="feature-icon">◈</div>
+            <h3>Builder surface area</h3>
+            <p>Node software, future SDK paths, and protocol interfaces that make the project feel open for builders early.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="network">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Network status</h2>
+          </div>
+          <p>
+            Even placeholder live-style metrics make a project feel more real. Later, these can connect to your actual node data.
+          </p>
+        </div>
+
+        <div class="network-layout">
+          <div class="network-panel reveal">
+            <span class="eyebrow-alt">Live panel</span>
+            <h3>Netlithic testnet preview</h3>
+            <div class="status-grid">
+              <div class="network-row">
+                <strong>Chain</strong>
+                <span>Netlithic Testnet</span>
+              </div>
+              <div class="network-row">
+                <strong>Consensus</strong>
+                <span>Active</span>
+              </div>
+              <div class="network-row">
+                <strong>Latest block</strong>
+                <span>#1043</span>
+              </div>
+              <div class="network-row">
+                <strong>Nodes</strong>
+                <span>03 online</span>
+              </div>
+            </div>
+            <div class="status-badges">
+              <div class="status-badge">Open Source</div>
+              <div class="status-badge">Community Governed</div>
+              <div class="status-badge">Built in Public</div>
+            </div>
+          </div>
+
+          <div class="protocol-card reveal">
+            <span class="eyebrow-alt">Builders</span>
+            <h3>Build on Netlithic</h3>
+            <div class="status-list">
+              <div class="mini-panel">
+                <strong>Node software</strong>
+                <p>Run the chain locally, test behavior, and participate in early network experimentation.</p>
+              </div>
+              <div class="mini-panel">
+                <strong>Protocol tooling</strong>
+                <p>Future-facing SDK and governance components give builders a reason to start early.</p>
+              </div>
+              <div class="mini-panel">
+                <strong>AI-native future</strong>
+                <p>Designed for a world where agents, automation, and coordination systems need reliable infrastructure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="community">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Community momentum</h2>
+          </div>
+          <p>
+            Big projects feel alive. Even before launch, your website should signal momentum across the places people gather.
+          </p>
+        </div>
+
+        <div class="community-grid">
+          <article class="community-card reveal">
+            <span class="community-number">01</span>
+            <h3>GitHub</h3>
+            <p>Show active building, protocol progress, and a clear place for technical credibility to live.</p>
+          </article>
+          <article class="community-card reveal">
+            <span class="community-number">02</span>
+            <h3>Discord</h3>
+            <p>Create gravity around announcements, governance discussion, builder feedback, and early believers.</p>
+          </article>
+          <article class="community-card reveal">
+            <span class="community-number">03</span>
+            <h3>X</h3>
+            <p>Turn the public narrative into momentum with progress updates, mission posts, and launch signal boosts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="cta" id="cta">
       <div class="container">
         <div class="cta-box reveal">
@@ -764,9 +1101,9 @@
             that people immediately understand this is bigger than a meme coin splash screen.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://github.com/" target="_blank" rel="noreferrer">Open GitHub</a>
-            <a class="btn btn-secondary" href="https://discord.com/" target="_blank" rel="noreferrer">Join Discord</a>
-            <a class="btn btn-secondary" href="https://x.com/" target="_blank" rel="noreferrer">Follow on X</a>
+            <a class="btn btn-primary" href="https://github.com/IronNode951/Netlithic" target="_blank" rel="noreferrer">Open GitHub</a>
+            <a class="btn btn-secondary" href="https://discord.gg/a92xq4du" target="_blank" rel="noreferrer">Join Discord</a>
+            <a class="btn btn-secondary" href="https://x.com/netlithicchain" target="_blank" rel="noreferrer">Follow on X</a>
           </div>
         </div>
       </div>
@@ -776,7 +1113,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>© 2026 Netlithic. Community-built blockchain vision.</div>
-      <div>Designed for GitHub Pages deployment.</div>
+      <div>Docs · Whitepaper · GitHub · Discord · X · founder@netlithicchain.com</div>
     </div>
   </footer>
 
