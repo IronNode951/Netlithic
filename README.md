@@ -94,3 +94,5 @@ https://netlithicchain.com
 ## License
 
 Open source protocol.
+
+© 2026 Netlithic Protocol — Open Source (MIT License)
