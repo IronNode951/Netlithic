@@ -86,15 +86,46 @@ The token serves several core functions within the ecosystem:
 
 6. Token Distribution
 
-The Netlithic token supply is designed to prioritize community ownership.
+## Token Distribution
 
-Example distribution model:
+The Netlithic token supply is structured to prioritize community ownership, network security, and long-term ecosystem sustainability.
 
-Allocation	Percentage
-Community Contribution Pool	60%
-Validator Rewards	20%
-Protocol Treasury	15%
-Core Development Team	5%
+**Distribution Model**
+
+| Allocation | Percentage |
+|-----------|-----------|
+| Community Contribution Pool | 60% |
+| Validator Rewards | 20% |
+| Protocol Treasury | 15% |
+| Protocol Reserve | 5% |
+
+**Community (60%)**  
+Allocated to ecosystem incentives, developer grants, and community participation to ensure decentralized network ownership.
+
+**Validators (20%)**  
+Distributed through block rewards and staking incentives to secure the network and support validator participation.
+
+**Treasury (15%)**  
+Supports long-term development including infrastructure, grants, security audits, and ecosystem growth.
+
+**Reserve (5%)**  
+Maintained as a protocol stabilization fund for emergencies and governance-approved initiatives.
+
+Tokens are distributed gradually over time through participation, validator operation, and ecosystem contribution.
+
+**Community (60%)**  
+Allocated to ecosystem incentives, developer grants, and community participation to ensure decentralized network ownership.
+
+**Validators (20%)**  
+Distributed through block rewards and staking incentives to secure the network and support validator participation.
+
+**Treasury (15%)**  
+Supports long-term development including infrastructure, grants, security audits, and ecosystem growth.
+
+**Reserve (5%)**  
+Maintained as a protocol stabilization fund for emergencies and governance-approved initiatives.
+
+Tokens are distributed gradually over time through participation, validator operation, and ecosystem contribution.
 
 Tokens allocated to contributors are distributed gradually over time through contribution mechanisms.
 
