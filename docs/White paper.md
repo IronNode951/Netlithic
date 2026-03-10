@@ -113,22 +113,6 @@ Maintained as a protocol stabilization fund for emergencies and governance-appro
 
 Tokens are distributed gradually over time through participation, validator operation, and ecosystem contribution.
 
-**Community (60%)**  
-Allocated to ecosystem incentives, developer grants, and community participation to ensure decentralized network ownership.
-
-**Validators (20%)**  
-Distributed through block rewards and staking incentives to secure the network and support validator participation.
-
-**Treasury (15%)**  
-Supports long-term development including infrastructure, grants, security audits, and ecosystem growth.
-
-**Reserve (5%)**  
-Maintained as a protocol stabilization fund for emergencies and governance-approved initiatives.
-
-Tokens are distributed gradually over time through participation, validator operation, and ecosystem contribution.
-
-Tokens allocated to contributors are distributed gradually over time through contribution mechanisms.
-
 7. Proof of Contribution
 
 Proof of Contribution (PoC) is the core distribution mechanism for Netlithic.
