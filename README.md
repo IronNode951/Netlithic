@@ -59,7 +59,7 @@ Utility:
 | Community Contribution Pool | 60% |
 | Validator Rewards | 20% |
 | Protocol Treasury | 15% |
-| Core Development Team | 5% |
+| Protocol Reserve | 5% |
 
 Ownership of the network is earned through **contribution instead of speculation**.
 
