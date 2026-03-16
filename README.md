@@ -73,7 +73,7 @@ python p2p_http.py --port 8001 --peer http://localhost:8000
 
 For a full setup guide see:
 
-`/docs/NODE_SETUP.md`
+[Full Node Setup Guide](docs/NODE_SETUP.md)
 
 ---
 
