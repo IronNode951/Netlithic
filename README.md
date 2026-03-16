@@ -1,19 +1,20 @@
-#![Netlithic](netlithic-logo.png)
+<p align="center">
+  <img src="netlithic-logo.png" width="220">
+</p>
 
-Netlithic is a community-driven blockchain protocol designed for
-decentralized infrastructure and future AI-native applications.
-
-The project is open-source and governed by its community.
+# Netlithic
 
 **The AI-native blockchain owned by its contributors.**
 
-Netlithic is a decentralized blockchain protocol designed to reward the people who **build, secure, and grow the network**.
+Netlithic is a community-driven blockchain protocol designed for decentralized infrastructure and future AI-native applications.
+
+The network is open source and governed by its contributors.
 
 Instead of prioritizing speculation, Netlithic distributes ownership through **Proof of Contribution**, allowing developers, validators, and community members to earn their share of the network.
 
 ---
 
-## Core Ideas
+## Core Principles
 
 • Fair Launch Distribution  
 • Proof of Contribution  
@@ -27,14 +28,14 @@ Instead of prioritizing speculation, Netlithic distributes ownership through **P
 
 Netlithic aims to become the **foundation layer for decentralized intelligence**.
 
-The network is designed to support:
+The protocol is designed to support:
 
 - decentralized applications
 - contributor-owned ecosystems
 - validator security networks
 - autonomous AI agents
 
-Value flows to the people and systems that **create value for the network**.
+Value flows to the participants who **create value for the network**.
 
 ---
 
@@ -42,7 +43,7 @@ Value flows to the people and systems that **create value for the network**.
 
 Ticker: **NLT**
 
-Utility:
+Utility includes:
 
 - transaction fees  
 - validator staking  
@@ -55,7 +56,7 @@ Utility:
 ## Token Distribution
 
 | Allocation | Percentage |
-|--------|--------|
+|------------|------------|
 | Community Contribution Pool | 60% |
 | Validator Rewards | 20% |
 | Protocol Treasury | 15% |
@@ -67,21 +68,28 @@ Ownership of the network is earned through **contribution instead of speculation
 
 ## Documentation
 
-Whitepaper and protocol documentation will be added to the `/docs` folder.
+Protocol documentation is located in the `/docs` directory.
 
-Planned documentation:
+Available documentation includes:
 
-- Litepaper
-- Whitepaper
-- Tokenomics
-- Ecosystem Map
-- Protocol Roadmap
+- Whitepaper  
+- Tokenomics  
+- Roadmap  
+- Ecosystem Map  
+- Genesis Information  
 
 ---
 
-## Status
+## Project Status
 
-Early protocol development.
+Netlithic is currently in **early protocol development**.
+
+Current focus:
+
+• core blockchain implementation  
+• peer-to-peer networking  
+• validator architecture  
+• contribution reward mechanisms  
 
 ---
 
@@ -93,6 +101,6 @@ https://netlithicchain.com
 
 ## License
 
-Open source protocol.
+Netlithic is released as open-source software under the **MIT License**.
 
-© 2026 Netlithic Protocol — Open Source (MIT License)
+© 2026 Netlithic Protocol
