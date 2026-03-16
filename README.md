@@ -50,16 +50,25 @@ Netlithic can currently be run locally for development and testing.
 
 • Python 3.10+
 
-### Clone the Repository
-git clone https://github.com/netlithic/netlithic.git
 
+### Clone the Repository
+
+```
+git clone https://github.com/netlithic/netlithic.git
 cd netlithic
+```
 
 ### Start a Node
+
+```
 python p2p_http.py --port 8000
+```
 
 ### Start a Second Node (Optional)
+
+```
 python p2p_http.py --port 8001 --peer http://localhost:8000
+```
 
 
 For a full setup guide see:
