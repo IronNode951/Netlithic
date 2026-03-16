@@ -42,57 +42,16 @@ Value flows to the participants who **create value for the network**.
 
 ---
 
-## Token
+## Run a Netlithic Node (Local Devnet)
 
-Ticker: **NLT**
+Netlithic can currently be run locally for development and testing.
 
-Utility includes:
+### Requirements
 
-- transaction fees  
-- validator staking  
-- governance participation  
-- network services  
-- AI agent interactions  
+• Python 3.10+
 
----
-
-## Token Distribution
-
-| Allocation | Percentage |
-|------------|------------|
-| Community Contribution Pool | 60% |
-| Validator Rewards | 20% |
-| Protocol Treasury | 15% |
-| Protocol Reserve | 5% |
-
-Ownership of the network is earned through **contribution instead of speculation**.
-
----
-
-## Documentation
-
-Protocol documentation is located in the `/docs` directory.
-
-Available documentation includes:
-
-- Whitepaper  
-- Tokenomics  
-- Roadmap  
-- Ecosystem Map  
-- Genesis Information  
-
----
-
-## Project Status
-
-Netlithic is currently in **early protocol development**.
-
-Current focus:
-
-• core blockchain implementation  
-• peer-to-peer networking  
-• validator architecture  
-• contribution reward mechanisms  
+### Clone the Repository
+https://github.com/netlithichain/netlithic.git
 
 ---
 
