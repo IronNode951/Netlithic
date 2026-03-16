@@ -1,4 +1,4 @@
-# Netlithic
+#![Netlithic](assets/netlithic-logo.png)
 
 Netlithic is a community-driven blockchain protocol designed for
 decentralized infrastructure and future AI-native applications.
