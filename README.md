@@ -2,7 +2,7 @@
 ![Status](https://img.shields.io/badge/status-devnet-orange)
 ![Language](https://img.shields.io/badge/python-3.10+-green)
 <p align="center">
-  <img src="netlithic-logo.png" width="220">
+  <img src="website/netlithic-logo.png" width="220">
 </p>
 
 # Netlithic
