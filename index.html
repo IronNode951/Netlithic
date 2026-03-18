@@ -4,6 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Netlithic</title>
+
+  <meta name="description" content="Netlithic is a community-driven blockchain protocol designed to reward contribution over speculation and support future AI-native infrastructure." />
+  <meta name="theme-color" content="#040816" />
+
+  <meta property="og:title" content="Netlithic" />
+  <meta property="og:description" content="The contributor-owned blockchain for long-term builders." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="netlithic-logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Netlithic" />
+  <meta name="twitter:description" content="The contributor-owned blockchain for long-term builders." />
+  <meta name="twitter:image" content="netlithic-logo.png" />
+
   <link rel="icon" type="image/png" href="netlithic-icon.png" />
 
   <style>
@@ -149,36 +163,38 @@
       align-items: center;
       justify-content: space-between;
       padding: 18px 0;
+      gap: 16px;
     }
 
-    .brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  font-weight:800;
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-}
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:800;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      flex-shrink: 0;
+    }
 
-.brand-logo{
-  width:42px;
-  height:42px;
-  object-fit:contain;
-  transition:all .35s ease;
-  filter:drop-shadow(0 0 10px rgba(94,162,255,0.35));
-}
+    .brand-logo {
+      width:42px;
+      height:42px;
+      object-fit:contain;
+      transition:all .35s ease;
+      filter:drop-shadow(0 0 10px rgba(94,162,255,0.35));
+    }
 
-.brand:hover .brand-logo{
-  transform:rotate(6deg) scale(1.05);
-  filter:drop-shadow(0 0 18px rgba(94,162,255,0.6));
-}
+    .brand:hover .brand-logo {
+      transform:rotate(6deg) scale(1.05);
+      filter:drop-shadow(0 0 18px rgba(94,162,255,0.6));
+    }
 
-.brand-text{
-  font-size:1.15rem;
-  background:linear-gradient(180deg,#ffffff,#7fb2ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
+    .brand-text {
+      font-size:1.15rem;
+      background:linear-gradient(180deg,#ffffff,#7fb2ff);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
 
     .nav-links {
       display: flex;
@@ -233,13 +249,13 @@
       text-transform: uppercase;
     }
 
-    .hero h1 span{
-display:block;
-background:linear-gradient(180deg,#f4f8ff,#74a6ff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-text-shadow:0 0 18px rgba(94,162,255,.35);
-}
+    .hero h1 span {
+      display:block;
+      background:linear-gradient(180deg,#f4f8ff,#74a6ff);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-shadow:0 0 18px rgba(94,162,255,.35);
+    }
 
     .hero p {
       margin: 0 0 28px;
@@ -287,7 +303,7 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
-      max-width: 680px;
+      max-width: 760px;
     }
 
     .stat,
@@ -308,7 +324,7 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
     .stat strong {
       display: block;
       margin-bottom: 8px;
-      font-size: 1.2rem;
+      font-size: 1.06rem;
     }
 
     .stat span,
@@ -319,10 +335,13 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
     .builder-card p,
     .community-card p,
     .network-row span,
-    .arch-node p {
+    .arch-node p,
+    .protocol-card p,
+    .architecture-card p {
       color: var(--muted);
       font-size: 0.92rem;
       line-height: 1.7;
+      margin: 0;
     }
 
     .hero-visual {
@@ -510,6 +529,8 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
       margin-bottom: 18px;
       color: var(--blue);
       font-weight: 800;
+      position: relative;
+      z-index: 1;
     }
 
     .feature h3,
@@ -524,6 +545,17 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
     .architecture-card h3 {
       margin: 0 0 10px;
       font-size: 1.08rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature p,
+    .phase p,
+    .token-card p,
+    .builder-card p,
+    .community-card p {
+      position: relative;
+      z-index: 1;
     }
 
     .protocol-layout,
@@ -572,6 +604,7 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
     .architecture-flow {
       display: grid;
       gap: 14px;
+      margin-top: 18px;
     }
 
     .arch-node {
@@ -687,6 +720,14 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
       flex-wrap: wrap;
     }
 
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -797,31 +838,31 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
   </style>
 </head>
 <body>
+  <div class="network-ambient">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-<div class="network-ambient">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-<div class="grid-overlay"></div>
+  <div class="grid-overlay"></div>
 
   <header class="nav">
     <div class="container nav-inner">
       <a href="#top" class="brand">
-        <img src="netlithic-icon.png" alt="Netlithic logo" class="brand-logo">
+        <img src="netlithic-icon.png" alt="Netlithic logo" class="brand-logo" />
         <span class="brand-text">NETLITHIC</span>
       </a>
 
       <nav class="nav-links">
         <a href="#vision">Vision</a>
+        <a href="#principles">Principles</a>
         <a href="#features">Features</a>
-        <a href="#why">Why Netlithic</a>
         <a href="#tokenomics">Tokenomics</a>
         <a href="#roadmap">Roadmap</a>
+        <a href="docs/White%20paper.md" target="_blank" rel="noreferrer">Whitepaper</a>
         <a href="https://github.com/Netlithicchain/Netlithic" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://x.com/netlithic" target="_blank" rel="noreferrer">X</a>
         <a href="https://discord.gg/JmaRSVQh8D" target="_blank" rel="noreferrer">Discord</a>
@@ -834,37 +875,40 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
     <section class="hero">
       <div class="container hero-wrap">
         <div class="reveal visible">
-          <div class="eyebrow">⚡ Community-governed. AI-native. Anti-manipulation by design.</div>
+          <div class="eyebrow">⚡ Community-driven. Contribution-focused. AI-native direction.</div>
           <h1>
-            The chain built to
-            <span>outgrow meme-cycle chaos.</span>
+            The contributor-owned
+            <span>blockchain for long-term builders.</span>
           </h1>
           <p>
-            Netlithic is a next-generation blockchain experiment focused on reducing pump-and-dump dynamics,
-            strengthening community governance, and laying the groundwork for AI-native protocols.
+            Netlithic is a community-driven blockchain protocol designed to reward contribution over speculation,
+            support validator participation, and create infrastructure for future AI-native applications.
           </p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://github.com/Netlithicchain/Netlithic" target="_blank" rel="noreferrer">Explore the build</a>
-            <a class="btn btn-secondary" href="#features">See the vision</a>
+            <a class="btn btn-secondary" href="docs/White%20paper.md" target="_blank" rel="noreferrer">Read Whitepaper</a>
             <a class="btn btn-secondary" href="https://discord.gg/JmaRSVQh8D" target="_blank" rel="noreferrer">Join Discord</a>
           </div>
 
           <div class="hero-stats">
             <div class="stat">
-              <strong>Fair launch direction</strong>
+              <strong>Contribution-based ownership</strong>
+              <span>Designed to align network ownership with real participation, not early capital access.</span>
             </div>
             <div class="stat">
-              <strong>Governance focus</strong>
+              <strong>Validator-focused growth</strong>
+              <span>Built to reward node operators and contributors who help secure and expand the protocol.</span>
             </div>
             <div class="stat">
               <strong>AI-native future</strong>
+              <span>Structured as an evolving base layer for decentralized intelligence and open digital infrastructure.</span>
             </div>
           </div>
         </div>
 
         <div class="hero-visual reveal">
-          <img src="netlithic-icon.png" alt="Netlithic icon" class="hero-logo-badge">
+          <img src="netlithic-icon.png" alt="Netlithic icon" class="hero-logo-badge" />
           <div class="hero-card">
             <div class="terminal">
               <div class="terminal-top">
@@ -874,9 +918,9 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
               </div>
               <div class="terminal-body">
                 <div><span class="comment">// Netlithic mission</span></div>
-                <div><span class="token">consensus</span>: community-aligned</div>
-                <div><span class="token">launch</span>: fair and transparent</div>
-                <div><span class="token">protection</span>: anti-whale incentives</div>
+                <div><span class="token">ownership</span>: earned through contribution</div>
+                <div><span class="token">distribution</span>: fair launch direction</div>
+                <div><span class="token">security</span>: validator participation</div>
                 <div><span class="token">future</span>: AI-native infrastructure</div>
                 <div><span class="good">status</span>: building in public</div>
               </div>
@@ -884,9 +928,9 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
 
             <div class="floating-card">
               <div class="pill">Community-first design</div>
-              <div class="pill">Governance primitives</div>
-              <div class="pill">Public build process</div>
-              <div class="pill">Protocol expansion path</div>
+              <div class="pill">Open source protocol</div>
+              <div class="pill">Fair launch direction</div>
+              <div class="pill">Long-term network focus</div>
             </div>
           </div>
         </div>
@@ -897,28 +941,40 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <h2>Built for conviction, not quick flips</h2>
+            <h2>Built for conviction, not extraction</h2>
           </div>
+          <p>
+            Netlithic is being developed around a simple belief: ownership of a blockchain network should be earned through
+            contribution, security participation, and ecosystem growth rather than short-term speculative advantage.
+          </p>
         </div>
 
         <div class="protocol-layout">
           <div class="protocol-card reveal">
             <span class="eyebrow-alt">Protocol</span>
-            <h3>The Netlithic Protocol</h3>
+            <h3>The Netlithic protocol vision</h3>
+            <p>
+              Netlithic is being designed as a foundation layer for decentralized applications, validator coordination,
+              open builder ecosystems, and future AI-native economic activity.
+            </p>
             <div class="protocol-list">
               <div class="mini-panel">
                 <strong>Community-first governance</strong>
+                <p>Network direction should increasingly reflect contributors, builders, validators, and long-term participants.</p>
               </div>
               <div class="mini-panel">
                 <strong>Anti-extraction philosophy</strong>
+                <p>The system is intended to reduce pump-and-dump incentives and resist concentration around short-term actors.</p>
               </div>
             </div>
             <div class="mini-grid">
               <div class="mini-panel">
-                <strong>Open source</strong>
+                <strong>Open source foundation</strong>
+                <p>Core protocol development is being built publicly to encourage transparency and contributor alignment.</p>
               </div>
               <div class="mini-panel">
                 <strong>AI-native path</strong>
+                <p>The long-term architecture is intended to support autonomous systems and decentralized intelligence.</p>
               </div>
             </div>
           </div>
@@ -926,21 +982,69 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
           <div class="architecture-card reveal">
             <span class="eyebrow-alt">Architecture</span>
             <h3>System design path</h3>
+            <p>
+              Netlithic is evolving from a working blockchain prototype toward a broader protocol stack that can support
+              governance, contributor rewards, and AI-native application layers.
+            </p>
             <div class="architecture-flow">
               <div class="arch-node">
                 <h3>Nodes</h3>
+                <p>Distributed participants running the protocol and helping secure the network.</p>
               </div>
               <div class="arch-node">
-                <h3>Consensus Layer</h3>
+                <h3>Consensus layer</h3>
+                <p>Core blockchain validation, block production, and network synchronization.</p>
               </div>
               <div class="arch-node">
-                <h3>Governance Layer</h3>
+                <h3>Governance layer</h3>
+                <p>Future mechanisms for community coordination, decision-making, and contributor alignment.</p>
               </div>
               <div class="arch-node">
-                <h3>AI Protocol Layer</h3>
+                <h3>AI protocol layer</h3>
+                <p>Long-term support for intelligent agents, open automation, and decentralized digital infrastructure.</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="principles">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Core principles</h2>
+          </div>
+          <p>
+            Netlithic is being designed around fair access, contribution-based rewards, validator participation,
+            and long-term ecosystem alignment.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="feature-icon">01</div>
+            <h3>Fair distribution</h3>
+            <p>
+              Ownership should not be dominated by early insiders, automated extraction, or short-term capital concentration.
+            </p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon">02</div>
+            <h3>Contribution-based rewards</h3>
+            <p>
+              Builders, validators, node operators, and ecosystem participants should earn value through real contribution.
+            </p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-icon">03</div>
+            <h3>Long-term alignment</h3>
+            <p>
+              The protocol should reward durable participation and network growth instead of short-lived speculative cycles.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -951,22 +1055,35 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
           <div>
             <h2>Core pillars</h2>
           </div>
+          <p>
+            The current design direction focuses on creating a protocol that is credible, resilient, and useful
+            well beyond the typical meme-cycle lifecycle.
+          </p>
         </div>
 
         <div class="feature-grid">
           <article class="feature reveal">
             <div class="feature-icon">01</div>
             <h3>Anti-manipulation design</h3>
+            <p>
+              Netlithic is being structured to reduce short-term extractive behavior and encourage sustainable participation.
+            </p>
           </article>
 
           <article class="feature reveal">
             <div class="feature-icon">02</div>
             <h3>Community-first governance</h3>
+            <p>
+              Governance is intended to evolve around contributors and network participants rather than centralized gatekeepers.
+            </p>
           </article>
 
           <article class="feature reveal">
             <div class="feature-icon">03</div>
             <h3>AI-native protocol path</h3>
+            <p>
+              The long-term roadmap includes support for autonomous agents and decentralized intelligence infrastructure.
+            </p>
           </article>
         </div>
       </div>
@@ -978,22 +1095,35 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
           <div>
             <h2>Why Netlithic exists</h2>
           </div>
+          <p>
+            Many blockchain launches optimize for attention and speculation first. Netlithic is being built around
+            trust, contribution, and long-term utility instead.
+          </p>
         </div>
 
         <div class="feature-grid">
           <article class="feature reveal">
             <div class="feature-icon">A</div>
             <h3>Trust is the moat</h3>
+            <p>
+              Durable ecosystems are built when users believe the system is fair, transparent, and aligned with contributors.
+            </p>
           </article>
 
           <article class="feature reveal">
             <div class="feature-icon">B</div>
             <h3>Utility needs a runway</h3>
+            <p>
+              Useful networks require incentive structures that allow builders, validators, and communities to grow over time.
+            </p>
           </article>
 
           <article class="feature reveal">
             <div class="feature-icon">C</div>
             <h3>Brand shapes belief</h3>
+            <p>
+              Strong protocol identity helps attract aligned participants who want to build for the long term rather than chase hype.
+            </p>
           </article>
         </div>
       </div>
@@ -1013,22 +1143,34 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
         <div class="token-grid">
           <article class="token-card reveal">
             <span class="token-number">60%</span>
-            <h3>Community Contributions</h3>
+            <h3>Community contributions</h3>
+            <p>
+              The largest portion of supply is intended to flow toward contributors helping grow the network over time.
+            </p>
           </article>
 
           <article class="token-card reveal">
             <span class="token-number">20%</span>
-            <h3>Validators &amp; Network Security</h3>
+            <h3>Validators &amp; network security</h3>
+            <p>
+              Validator participation and node operation should be rewarded for strengthening reliability and protocol security.
+            </p>
           </article>
 
           <article class="token-card reveal">
             <span class="token-number">15%</span>
-            <h3>Ecosystem Treasury</h3>
+            <h3>Ecosystem treasury</h3>
+            <p>
+              Treasury reserves support long-term ecosystem development, coordination, and community-driven growth initiatives.
+            </p>
           </article>
 
           <article class="token-card reveal">
             <span class="token-number">5%</span>
-            <h3>Protocol Reserve</h3>
+            <h3>Protocol reserve</h3>
+            <p>
+              A smaller reserve helps maintain strategic flexibility as the protocol matures and expands its infrastructure.
+            </p>
           </article>
         </div>
       </div>
@@ -1040,20 +1182,35 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
           <div>
             <h2>Ecosystem vision</h2>
           </div>
+          <p>
+            Netlithic is intended to become more than a chain. The long-term goal is an ecosystem that supports
+            builders, governance, and intelligent network activity.
+          </p>
         </div>
 
         <div class="builder-grid">
           <article class="builder-card reveal">
             <div class="feature-icon">◎</div>
             <h3>AI agent infrastructure</h3>
+            <p>
+              Future protocol layers may support autonomous agents participating in decentralized economic activity.
+            </p>
           </article>
+
           <article class="builder-card reveal">
             <div class="feature-icon">↗</div>
             <h3>Governance tooling</h3>
+            <p>
+              The ecosystem can evolve to include tools for community coordination, contribution scoring, and protocol direction.
+            </p>
           </article>
+
           <article class="builder-card reveal">
             <div class="feature-icon">◈</div>
             <h3>Builder surface area</h3>
+            <p>
+              A healthy network should create room for node operators, developers, ecosystem teams, and application builders.
+            </p>
           </article>
         </div>
       </div>
@@ -1065,27 +1222,42 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
           <div>
             <h2>Roadmap</h2>
           </div>
+          <p>
+            The current path is focused on turning the protocol from a working prototype into a durable public network.
+          </p>
         </div>
 
         <div class="roadmap">
           <article class="phase reveal">
             <small>Phase 01</small>
-            <h3>Identity + launch story</h3>
+            <h3>Core protocol prototype</h3>
+            <p>
+              Develop the blockchain core, transaction flow, signed transfers, block validation, and peer networking foundation.
+            </p>
           </article>
 
           <article class="phase reveal">
             <small>Phase 02</small>
-            <h3>Community formation</h3>
+            <h3>Multi-node devnet</h3>
+            <p>
+              Improve node communication, gossip propagation, chain sync, and local multi-node testing across the dev environment.
+            </p>
           </article>
 
           <article class="phase reveal">
             <small>Phase 03</small>
-            <h3>Mechanism testing</h3>
+            <h3>Tokenomics &amp; contribution model</h3>
+            <p>
+              Design reward logic that prioritizes validators, builders, node operators, and long-term contributors over speculation.
+            </p>
           </article>
 
           <article class="phase reveal">
             <small>Phase 04</small>
-            <h3>AI-native expansion</h3>
+            <h3>Public testnet</h3>
+            <p>
+              Open the network for broader participation, real testing, community feedback, and ecosystem experimentation.
+            </p>
           </article>
         </div>
       </div>
@@ -1095,51 +1267,62 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <h2>Network status</h2>
+            <h2>Current development status</h2>
           </div>
+          <p>
+            Netlithic is in active early-stage protocol development with the project being built publicly in code,
+            documentation, and community channels.
+          </p>
         </div>
 
         <div class="network-layout">
           <div class="network-panel reveal">
-            <span class="eyebrow-alt">Live panel</span>
-            <h3>Netlithic testnet preview</h3>
+            <span class="eyebrow-alt">Status</span>
+            <h3>Where the project is today</h3>
             <div class="status-grid">
               <div class="network-row">
-                <strong>Chain</strong>
-                <span>Netlithic Testnet</span>
+                <strong>Stage</strong>
+                <span>Early protocol development</span>
               </div>
               <div class="network-row">
-                <strong>Consensus</strong>
-                <span>Active</span>
+                <strong>Current build</strong>
+                <span>Python blockchain prototype</span>
               </div>
               <div class="network-row">
-                <strong>Latest block</strong>
-                <span>#1043</span>
+                <strong>Focus</strong>
+                <span>Architecture, tokenomics, and testnet readiness</span>
               </div>
               <div class="network-row">
-                <strong>Nodes</strong>
-                <span>03 online</span>
+                <strong>Approach</strong>
+                <span>Building in public</span>
               </div>
             </div>
             <div class="status-badges">
               <div class="status-badge">Open Source</div>
-              <div class="status-badge">Community Governed</div>
-              <div class="status-badge">Built in Public</div>
+              <div class="status-badge">Contributor Focused</div>
+              <div class="status-badge">Community Governed Direction</div>
             </div>
           </div>
 
           <div class="protocol-card reveal">
             <span class="eyebrow-alt">Builders</span>
             <h3>Build on Netlithic</h3>
+            <p>
+              The project is being developed with a long-term view toward giving developers, validators, and ecosystem builders
+              a credible foundation to build on.
+            </p>
             <div class="status-list">
               <div class="mini-panel">
                 <strong>Node software</strong>
+                <p>Core blockchain functionality is being developed openly as the network foundation matures.</p>
               </div>
               <div class="mini-panel">
                 <strong>Protocol tooling</strong>
+                <p>Documentation, development structure, and ecosystem surfaces can expand as the network evolves.</p>
               </div>
               <div class="mini-panel">
                 <strong>AI-native future</strong>
+                <p>Long-term roadmap direction includes support for decentralized intelligence and intelligent network participation.</p>
               </div>
             </div>
           </div>
@@ -1153,20 +1336,32 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
           <div>
             <h2>Community momentum</h2>
           </div>
+          <p>
+            Netlithic is being built in public across code, discussion, and early community formation channels.
+          </p>
         </div>
 
         <div class="community-grid">
           <article class="community-card reveal">
             <span class="community-number">01</span>
             <h3>GitHub</h3>
+            <p>
+              Follow protocol progress, review code, and watch the blockchain prototype evolve in public.
+            </p>
           </article>
           <article class="community-card reveal">
             <span class="community-number">02</span>
             <h3>Discord</h3>
+            <p>
+              Join early discussions around community formation, governance direction, and contributor alignment.
+            </p>
           </article>
           <article class="community-card reveal">
             <span class="community-number">03</span>
             <h3>X</h3>
+            <p>
+              Track public updates, launch narrative development, and the broader story behind the protocol vision.
+            </p>
           </article>
         </div>
       </div>
@@ -1175,10 +1370,15 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
     <section class="cta" id="cta">
       <div class="container">
         <div class="cta-box reveal">
-          <img src="netlithic-logo.png" alt="Netlithic wordmark" style="width:min(100%,340px);height:auto;display:block;margin-bottom:18px;object-fit:contain;">
+          <img src="netlithic-logo.png" alt="Netlithic wordmark" style="width:min(100%,340px);height:auto;display:block;margin-bottom:18px;object-fit:contain;" />
           <h2>Build in public. Launch with intention.</h2>
+          <p>
+            Netlithic is early, but the direction is clear: build a contributor-owned blockchain ecosystem designed for
+            durable participation, validator security, and long-term network utility.
+          </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://github.com/Netlithicchain/Netlithic" target="_blank" rel="noreferrer">Open GitHub</a>
+            <a class="btn btn-secondary" href="docs/White%20paper.md" target="_blank" rel="noreferrer">Read Whitepaper</a>
             <a class="btn btn-secondary" href="https://discord.gg/JmaRSVQh8D" target="_blank" rel="noreferrer">Join Discord</a>
             <a class="btn btn-secondary" href="https://x.com/netlithic" target="_blank" rel="noreferrer">Follow on X</a>
           </div>
@@ -1190,7 +1390,14 @@ text-shadow:0 0 18px rgba(94,162,255,.35);
   <footer class="footer">
     <div class="container footer-inner">
       <div>© 2026 Netlithic. Community-built blockchain vision.</div>
-      <div>Docs · Whitepaper · GitHub · Discord · X · founder@netlithicchain.com</div>
+      <div class="footer-links">
+        <a href="docs/">Docs</a> ·
+        <a href="docs/White%20paper.md" target="_blank" rel="noreferrer">Whitepaper</a> ·
+        <a href="https://github.com/Netlithicchain/Netlithic" target="_blank" rel="noreferrer">GitHub</a> ·
+        <a href="https://discord.gg/JmaRSVQh8D" target="_blank" rel="noreferrer">Discord</a> ·
+        <a href="https://x.com/netlithic" target="_blank" rel="noreferrer">X</a> ·
+        <a href="mailto:founder@netlithicchain.com">founder@netlithicchain.com</a>
+      </div>
     </div>
   </footer>
 
